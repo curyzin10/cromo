@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Formulário de Financiamento</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.parceiro_nome.label }} {{ form.parceiro_nome() }}<br>
+    {{ form.parceiro_email.label }} {{ form.parceiro_email() }}<br>
+    {{ form.cliente_nome.label }} {{ form.cliente_nome() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}

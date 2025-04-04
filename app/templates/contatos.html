@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Cromo Financiamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <!-- Favicon padrão para navegadores -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon32x32.png') }}">
+    <!-- Ícone para Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/android-chrome-512x512.png') }}">
+    <!-- Ícone para iOS (iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+    <!-- Manifesto para PWA -->
+    <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="static/img/cromologo2.png" alt="Logo Cromo Financiamentos" height="60">
+            
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('main.quem_somos') }}">Quem Somos</a></li>
+                <li><a href="{{ url_for('main.contatos') }}">Contatos</a></li>
+                <li><a href="{{ url_for('main.login') }}">Login</a></li>
+
+
+            </ul>
+        </nav>
+        <!-- Botão para Voltar ao Início -->
+        <div class="home-button">
+            <a href="{{ url_for('main.home') }}" class="btn-home">Início</a>
+
+        </div>
+    </header>
+
+    <!-- Título da página -->
+    <section class="contact-info">
+        <h1>Entre em Contato</h1>
+        <p>Se você tiver alguma dúvida ou precisa de mais informações, preencha o formulário abaixo.</p>
+
+        <!-- Formulário de contato -->
+        <form action="send_contact.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Informações de contato -->
+    <section class="contact-details">
+        <h2>Informações de Contato</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Cidade - Estado</p>
+        <p><strong>Telefone:</strong> (11) 1234-5678</p>
+        <p><strong>Email:</strong> <a href="mailto:contato@cromofinanciamentos.com.br">contato@cromofinanciamentos.com.br</a></p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Cromo Financiamentos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

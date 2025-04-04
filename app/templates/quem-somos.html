@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Cromo Financiamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Favicon padrão para navegadores -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon32x32.png') }}">
+    <!-- Ícone para Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/android-chrome-512x512.png') }}">
+    <!-- Ícone para iOS (iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+    <!-- Manifesto para PWA -->
+    <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+
+</head>
+<body>
+    <!-- Cabeçalho com logomarca -->
+    <header>
+        <div class="logo">
+            <img src="static/img/cromologo2.png" alt="Logo Cromo Financiamentos" height="60">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('main.quem_somos') }}">Quem Somos</a></li>
+                <li><a href="{{ url_for('main.contatos') }}">Contatos</a></li>
+                <li><a href="{{ url_for('main.login') }}">Login</a></li>
+
+
+            </ul>
+        </nav>
+        <!-- Botão para Voltar ao Início -->
+        <div class="home-button">
+            <a href="{{ url_for('main.home') }}" class="btn-home">Início</a>
+
+        </div>
+    </header>
+
+    <!-- Seção de Quem Somos -->
+    <section class="who-we-are">
+        <div class="description">
+            <h1>Quem Somos</h1>
+            <p>A Cromo Financiamentos é uma empresa dedicada a oferecer soluções financeiras para aquisição de veículos, imóveis e embarcações. Com anos de experiência no mercado, nosso compromisso é proporcionar aos nossos clientes um atendimento personalizado, garantindo o melhor financiamento com condições acessíveis.</p>
+            <p>Nossa missão é transformar sonhos em realidade, oferecendo opções de financiamento que atendem às necessidades de cada cliente. Buscamos sempre a excelência em nossos serviços, com ética e transparência em todas as negociações.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Cromo Financiamentos - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
