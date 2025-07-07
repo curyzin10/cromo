@@ -6,81 +6,113 @@
     <title>Cromo Financiamentos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/android-chrome-512x512.png') }}">
-
-    <!-- Favicon padrão para navegadores -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon16x16.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon32x32.png') }}">
-    <!-- Ícone para Android -->
     <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/android-chrome-192x192.png') }}">
     <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/android-chrome-512x512.png') }}">
-    <!-- Ícone para iOS (iPhone, iPad) -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
-    <!-- Manifesto para PWA -->
     <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
-
-
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="{{ url_for('static', filename='img/cromologo2.png') }}" alt="Logo Cromo Financiamentos" height="60">
         </div>
-
         <nav class="navbar">
             <ul>
                 <li><a href="{{ url_for('main.quem_somos') }}">Quem Somos</a></li>
                 <li><a href="{{ url_for('main.contatos') }}">Contatos</a></li>
                 <li><a href="{{ url_for('main.login') }}">Login</a></li>
-
-
             </ul>
         </nav>
-
         <div class="home-button">
             <a href="{{ url_for('main.home') }}" class="btn-home">Início</a>
-
         </div>
-        
     </header>
 
-    <section class="image-links">
-        <div class="image-item">
-            <a href="{{ url_for('main.veiculo') }}">
-                <img src="{{ url_for('static', filename='img/caminhao4.png') }}" alt="Caminhão" class="financing-image">
-                <p>Financiamento de Caminhões</p>
-            </a>
+    <!-- NOVO LAYOUT EM BLOCO PARA TODOS OS VEÍCULOS -->
+<section class="veiculos-destaque">
+
+    <div class="bloco-destaque">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/caminhao4.png') }}" alt="Caminhão">
         </div>
-        <div class="image-item">
-            <a href="{{ url_for('main.veiculo') }}">
-                <img src="{{ url_for('static', filename='img/carro4.png') }}" alt="Carro" class="financing-image">
-                <p>Financiamento de Veículos</p>
-            </a>
+        <div class="texto">
+            <h2>Financiamento de Caminhões</h2>
+            <p>Adquira seu caminhão com as melhores taxas e prazos flexíveis. A Cromo Financiamentos oferece segurança e agilidade para sua frota.</p>
+            <a href="{{ url_for('main.veiculo') }}" class="btn-financiar">Simular Agora</a>
         </div>
-        <div class="image-item">
-            <a href="{{ url_for('main.veiculo') }}">
-                <img src="{{ url_for('static', filename='img/moto5.png') }}" alt="Moto" class="financing-image">
-                <p>Financiamento de Motos</p>
-            </a>
+    </div>
+
+    <div class="bloco-destaque invertido">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/carro4.png') }}" alt="Carro">
         </div>
-        <div class="image-item">
-            <a href="{{ url_for('main.imovel') }}">
-                <img src="{{ url_for('static', filename='img/cromocasa.png') }}" alt="Casa" class="financing-image">
-                <p>Financiamento de Imóveis</p>
-            </a>
+        <div class="texto">
+            <h2>Financiamento de Veículos</h2>
+            <p>Seu carro novo está mais perto do que você imagina. Financiamento rápido, fácil e com as melhores condições do mercado.</p>
+            <a href="{{ url_for('main.veiculo') }}" class="btn-financiar">Ver Opções</a>
         </div>
-        <div class="image-item">
-            <a href="{{ url_for('main.embarcacao') }}">
-                <img src="{{ url_for('static', filename='img/cromolancha.png') }}" alt="Barco" class="financing-image">
-                <p>Financiamento de Embarcações</p>
-            </a>
+    </div>
+
+    <div class="bloco-destaque">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/moto5.png') }}" alt="Moto">
         </div>
-        <div class="image-item">
-            <a href="{{ url_for('main.embarcacao') }}">
-                <img src="{{ url_for('static', filename='img/aeronave.png') }}" alt="Aeronave" class="financing-image">
-                <p>Financiamento de Aeronaves</p>
-            </a>
+        <div class="texto">
+            <h2>Financiamento de Motos</h2>
+            <p>A liberdade sobre duas rodas começa aqui. Parcelamos sua moto em condições especiais e com aprovação facilitada.</p>
+            <a href="{{ url_for('main.veiculo') }}" class="btn-financiar">Solicitar</a>
         </div>
-    </section>
+    </div>
+
+    <div class="bloco-destaque invertido">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/cromocasa.png') }}" alt="Casa">
+        </div>
+        <div class="texto">
+            <h2>Financiamento de Imóveis</h2>
+            <p>Seu sonho da casa própria está ao seu alcance. Trabalhamos com os principais bancos para oferecer o melhor financiamento imobiliário.</p>
+            <a href="{{ url_for('main.imovel') }}" class="btn-financiar">Simular Financiamento</a>
+        </div>
+    </div>
+
+    <div class="bloco-destaque">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/cromolancha.png') }}" alt="Lancha">
+        </div>
+        <div class="texto">
+            <h2>Financiamento de Embarcações</h2>
+            <p>Realize o sonho de navegar com tranquilidade. Financiamos lanchas, barcos e jet-skis com parcelas acessíveis.</p>
+            <a href="{{ url_for('main.embarcacao') }}" class="btn-financiar">Ver Condições</a>
+        </div>
+    </div>
+
+    <div class="bloco-destaque invertido">
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='img/aeronave.png') }}" alt="Aeronave">
+        </div>
+        <div class="texto">
+            <h2>Financiamento de Aeronaves</h2>
+            <p>Invista em mobilidade aérea com segurança. Temos planos sob medida para helicópteros, jatos executivos e aviões de pequeno porte.</p>
+            <a href="{{ url_for('main.embarcacao') }}" class="btn-financiar">Consultar Agora</a>
+        </div>
+    </div>
+
+    <div class="bloco-destaque">
+    <div class="imagem">
+        <img src="{{ url_for('static', filename='img/pecas.png') }}" alt="Peças de Caminhão">
+    </div>
+    <div class="texto">
+        <h2>Financiamento de Peças e Retifica de Motores para Caminhão</h2>
+        <p>Mantenha seu caminhão sempre rodando com peças novas e originais. Com a Cromo Financiamentos, você parcela o valor das peças com rapidez e segurança.</p>
+        <a href="{{ url_for('main.veiculo') }}" class="btn-financiar">Quero Financiar</a>
+    </div>
+</div>
+
+
+</section>
+
 
     <footer>
         <p>&copy; 2025 Cromo Financiamentos. Todos os direitos reservados.</p>
